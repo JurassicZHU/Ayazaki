@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Database {
     private Database instance;
     private ArrayList<Account> accountList;
+    private ArrayList<Game> gameList;
     private Database(){
         instance = new Database();
         accountList = new ArrayList<Account>();
@@ -17,7 +18,15 @@ public class Database {
     public Account findAccount(String target){
         for(Account account : accountList){
             if(account.getAccountNumber().equals(target)){
-                return new Account();
+                return account;
+            }
+        }
+        return null;
+    }
+    public Game findGame(String target){
+        for(Game game : gameList){
+            if(game.getGameID().equals(target)){
+                return game;
             }
         }
         return null;
