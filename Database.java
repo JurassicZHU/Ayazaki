@@ -15,6 +15,12 @@ public class Database {
         }
         return instance;
     }
+    public void addAccount(Account account){
+        accountList.add(account);
+    }
+    public void addGame(Game game){
+        gameList.add(game);
+    }
     public Account findAccount(String target){
         for(Account account : accountList){
             if(account.getAccountNumber().equals(target)){
