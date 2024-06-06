@@ -27,4 +27,16 @@ public class Game {
     public String getGameID() {
         return gameID;
     }
+    public String getGameName() {
+        return gameName;
+    }
+    public String getGameType() {
+        return gameType.getGameType();
+    }
+    public void displayGameType() {
+        gameType.displayGameType();
+    }
+    public double getGamePrice() {
+        return gamePrice;
+    }
 }
