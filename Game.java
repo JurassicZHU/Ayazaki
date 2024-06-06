@@ -3,8 +3,12 @@ public class Game {
     String gameName;
     GameType gameType;
     String gameID;
-    public Object getGameID() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getGameID'");
+    public Game(String gameName2, String gameType2, String gameID2) {
+        gameName = gameName2;
+        gameType = null;
+        gameID = gameID2;
+    }
+    public String getGameID() {
+        return gameID;
     }
 }
