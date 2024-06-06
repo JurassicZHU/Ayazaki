@@ -1,6 +1,6 @@
-public interface AccountType {
-    public static final String ADMIN = "admin";
-    public static final String USER = "user";
-    public static final String GUEST = "guest";
-    public static final String DEVELOPER = "developer";
+public abstract class AccountType {
+    public void displayAccountType() {
+        System.out.println("Account Type: " + getAccountType());
+    }
+    public abstract String getAccountType();
 }
