@@ -46,8 +46,9 @@ public class Database {
         String password = sc.nextLine();
         System.out.print("Enter email address: ");
         String email = sc.nextLine();
+        System.out.print("Enter account type: ");
         String accountNumber = generateAccountNumber();
-        Account account = new Account(username, password, email, accountNumber);
+        Account account = new Account(username, password, email, accountNumber, sc.nextLine());
         addAccount(account);
     }
     //help me to implement a method randomly generate account number
