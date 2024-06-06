@@ -72,8 +72,10 @@ public class Database {
         String gameName = sc.nextLine();
         System.out.print("Enter game type: ");
         String gameType = sc.nextLine();
+        System.out.print("Enter game price: ");
+        double gamePrice = sc.nextDouble();
         String gameID = generateGameID();
-        Game game = new Game(gameName, gameType, gameID);
+        Game game = new Game(gameName, gameType, gameID, gamePrice);
         addGame(game);
     }
     private String generateGameID() {

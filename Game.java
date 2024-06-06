@@ -2,7 +2,8 @@ public class Game {
     String gameName;
     GameType gameType;
     String gameID;
-    public Game(String gameName2, String gameType2, String gameID2) {
+    double gamePrice;
+    public Game(String gameName2, String gameType2, String gameID2, double gamePrice2) {
         gameName = gameName2;
         switch (gameType2) {
             case "FPS":
@@ -21,6 +22,7 @@ public class Game {
                 break;
         }
         gameID = gameID2;
+        gamePrice = gamePrice2;
     }
     public String getGameID() {
         return gameID;
