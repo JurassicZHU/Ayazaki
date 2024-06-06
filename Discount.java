@@ -1,3 +1,3 @@
-public class Discount {
-    
+public interface Discount{
+    public double applyDiscount(Game game);
 }

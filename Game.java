@@ -2,6 +2,7 @@ public class Game {
     String gameName;
     GameType gameType;
     String gameID;
+    Discount discountStrategy;
     double gamePrice;
     public Game(String gameName2, String gameType2, String gameID2, double gamePrice2) {
         gameName = gameName2;
@@ -38,5 +39,17 @@ public class Game {
     }
     public double getGamePrice() {
         return gamePrice;
+    }
+    public void setDiscount(Discount discount) {
+        discountStrategy = discount;
+    }
+    public Discount getDiscountStrategy() {
+        return discountStrategy;
+    }
+    public void displayDiscount() {
+        System.out.println("Discount: " + discountStrategy.toString());
+    }
+    public double getDiscountedPrice() {
+        return discountStrategy.applyDiscount(this);
     }
 }

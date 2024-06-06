@@ -16,7 +16,11 @@ public class Shop {
     public double checkout(){
         double total = 0;
         for(Game game : shoppingcart){
-            total += game.getPrice();
+            if(game.getDiscountStrategy() != null){
+                total += game.getDiscountedPrice();
+            } else {
+                total += game.getGamePrice();
+            }
         }
         shoppingcart.clear();
         return total;
